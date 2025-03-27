@@ -11,3 +11,8 @@ test('Devuelve "Fizz" si es divisible por 3', () => {
     expect(fizzbuzz(6)).toBe("Fizz");
     expect(fizzbuzz(9)).toBe("Fizz");
 });
+
+test('Devuelve "Buzz" si es divisible por 5', () => {
+    expect(fizzbuzz(5)).toBe("Buzz");
+    expect(fizzbuzz(10)).toBe("Buzz");
+});
