@@ -1,20 +1,104 @@
 [
   {
-    "html_url": "/commit/f43e4645a6365df9b6882c265824b9c87fecb03c",
     "sha": "f43e4645a6365df9b6882c265824b9c87fecb03c",
-    "stats": {
-      "total": 0,
-      "additions": 0,
-      "deletions": 0,
-      "date": "2025-03-26"
-    },
+    "author": "Juanpi",
     "commit": {
       "date": "2025-03-26T04:04:18.000Z",
       "message": "Fizzbuzz - Inicio de codigo",
-      "url": "/commit/f43e4645a6365df9b6882c265824b9c87fecb03c",
-      "comment_count": 0
+      "url": ""
+    },
+    "stats": {
+      "total": 3529,
+      "additions": 3529,
+      "deletions": 0,
+      "date": "2025-03-26"
     },
     "coverage": 50,
     "test_count": 1
+  },
+  {
+    "sha": "bc0c88463428780818723a5d49d329aa9592362f",
+    "author": "Juanpi",
+    "commit": {
+      "date": "2025-03-26T04:05:33.000Z",
+      "message": "Fizzbuzz - Inicio de codigo concommit-history",
+      "url": ""
+    },
+    "stats": {
+      "total": 20,
+      "additions": 20,
+      "deletions": 0,
+      "date": "2025-03-26"
+    },
+    "coverage": 50,
+    "test_count": 1
+  },
+  {
+    "sha": "6642d5807a99b040a035707bbfeaab2f1f749644",
+    "author": "Juanpi",
+    "commit": {
+      "date": "2025-03-27T03:56:48.000Z",
+      "message": "Fizzbuzz - pruebas 1 numero",
+      "url": ""
+    },
+    "stats": {
+      "total": 163,
+      "additions": 58,
+      "deletions": 105,
+      "date": "2025-03-27"
+    },
+    "coverage": 100,
+    "test_count": 1
+  },
+  {
+    "sha": "a7d9619ef4a822d0c94c8e0544dc786628906cff",
+    "author": "Juanpi",
+    "commit": {
+      "date": "2025-03-27T03:57:57.000Z",
+      "message": "Fizzbuzz - pruebas 2 numero multiplo de 3",
+      "url": ""
+    },
+    "stats": {
+      "total": 7,
+      "additions": 7,
+      "deletions": 0,
+      "date": "2025-03-27"
+    },
+    "coverage": 100,
+    "test_count": 2
+  },
+  {
+    "sha": "968a67206203f4d91bea017ca5245b92b8d4ea59",
+    "author": "Juanpi",
+    "commit": {
+      "date": "2025-03-27T03:58:49.000Z",
+      "message": "Fizzbuzz - pruebas 3 numero multiplo de 5",
+      "url": ""
+    },
+    "stats": {
+      "total": 6,
+      "additions": 6,
+      "deletions": 0,
+      "date": "2025-03-27"
+    },
+    "coverage": 100,
+    "test_count": 3
+  },
+  {
+    "sha": "e3062645852a81d71f0c1a20f86f7a06c4b7f3f6",
+    "author": "Juanpi",
+    "commit": {
+      "date": "2025-03-27T03:59:46.000Z",
+      "message": "Fizzbuzz - pruebas 4 numero multiplo de 5 y 3",
+      "url": ""
+    },
+    "stats": {
+      "total": 6,
+      "additions": 6,
+      "deletions": 0,
+      "date": "2025-03-27"
+    },
+    "coverage": 100,
+    "test_count": 4
   }
 ]
