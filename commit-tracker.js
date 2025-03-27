@@ -3,6 +3,15 @@ const { execSync } = require('child_process');
 
 const DATA_FILE = 'commit-history.json';
 
+function determineJobConclusion(commit) {
+  if (commit.coverage === 100 && commit.test_count > 0) {
+    return 'success';
+  } else if (commit.coverage < 100 || commit.test_count === 0) {
+    return 'failure';
+  }
+  return 'neutral';
+}
+
 function getAllCommits() {
   console.log('Recuperando historial de commits...');
   let commits = [];
@@ -53,7 +62,7 @@ function getAllCommits() {
       // Construir la URL del commit
       const commitUrl = `${repoBaseUrl}/commit/${sha}`;
 
-      commits.push({
+      const commitData = {
         sha,
         author,
         commit: {
@@ -68,8 +77,11 @@ function getAllCommits() {
           date: commitDate.toISOString().split('T')[0]
         },
         coverage,
-        test_count: testCount
-      });
+        test_count: testCount,
+        job_conclusion: determineJobConclusion({ coverage, test_count: testCount })
+      };
+
+      commits.push(commitData);
     });
   } catch (error) {
     console.error('Error obteniendo commits:', error);
