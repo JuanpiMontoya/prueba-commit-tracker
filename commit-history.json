@@ -100,5 +100,39 @@
     },
     "coverage": 100,
     "test_count": 4
+  },
+  {
+    "sha": "ab1936af95112ad2ba7c1c4be513f548e1de4120",
+    "author": "Juanpi",
+    "commit": {
+      "date": "2025-03-27T04:17:33.000Z",
+      "message": "Fizzbuzz - commit history corregido",
+      "url": ""
+    },
+    "stats": {
+      "total": 98,
+      "additions": 91,
+      "deletions": 7,
+      "date": "2025-03-27"
+    },
+    "coverage": 100,
+    "test_count": 4
+  },
+  {
+    "sha": "b00fd0cbdd8006907cb5ebf1ee9227e3f14ee12b",
+    "author": "Juanpi",
+    "commit": {
+      "date": "2025-03-27T04:31:29.000Z",
+      "message": "Fizzbuzz - commit history corregido 2",
+      "url": ""
+    },
+    "stats": {
+      "total": 23,
+      "additions": 15,
+      "deletions": 8,
+      "date": "2025-03-27"
+    },
+    "coverage": 100,
+    "test_count": 4
   }
 ]
