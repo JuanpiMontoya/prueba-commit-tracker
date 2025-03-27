@@ -5,3 +5,9 @@ test('Devuelve el numero si no es divisible por 3 or 5', () => {
     expect(fizzbuzz(2)).toBe(2);
     expect(fizzbuzz(4)).toBe(4);
 });
+
+test('Devuelve "Fizz" si es divisible por 3', () => {
+    expect(fizzbuzz(3)).toBe("Fizz");
+    expect(fizzbuzz(6)).toBe("Fizz");
+    expect(fizzbuzz(9)).toBe("Fizz");
+});
