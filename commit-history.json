@@ -5,7 +5,7 @@
     "commit": {
       "date": "2025-03-26T04:04:18.000Z",
       "message": "Fizzbuzz - Inicio de codigo",
-      "url": ""
+      "url": "https://github.com/JuanpiMontoya/prueba-commit-tracker/commit/f43e4645a6365df9b6882c265824b9c87fecb03c"
     },
     "stats": {
       "total": 3529,
@@ -22,7 +22,7 @@
     "commit": {
       "date": "2025-03-26T04:05:33.000Z",
       "message": "Fizzbuzz - Inicio de codigo concommit-history",
-      "url": ""
+      "url": "https://github.com/JuanpiMontoya/prueba-commit-tracker/commit/bc0c88463428780818723a5d49d329aa9592362f"
     },
     "stats": {
       "total": 20,
@@ -39,7 +39,7 @@
     "commit": {
       "date": "2025-03-27T03:56:48.000Z",
       "message": "Fizzbuzz - pruebas 1 numero",
-      "url": ""
+      "url": "https://github.com/JuanpiMontoya/prueba-commit-tracker/commit/6642d5807a99b040a035707bbfeaab2f1f749644"
     },
     "stats": {
       "total": 163,
@@ -56,7 +56,7 @@
     "commit": {
       "date": "2025-03-27T03:57:57.000Z",
       "message": "Fizzbuzz - pruebas 2 numero multiplo de 3",
-      "url": ""
+      "url": "https://github.com/JuanpiMontoya/prueba-commit-tracker/commit/a7d9619ef4a822d0c94c8e0544dc786628906cff"
     },
     "stats": {
       "total": 7,
@@ -73,7 +73,7 @@
     "commit": {
       "date": "2025-03-27T03:58:49.000Z",
       "message": "Fizzbuzz - pruebas 3 numero multiplo de 5",
-      "url": ""
+      "url": "https://github.com/JuanpiMontoya/prueba-commit-tracker/commit/968a67206203f4d91bea017ca5245b92b8d4ea59"
     },
     "stats": {
       "total": 6,
@@ -90,7 +90,7 @@
     "commit": {
       "date": "2025-03-27T03:59:46.000Z",
       "message": "Fizzbuzz - pruebas 4 numero multiplo de 5 y 3",
-      "url": ""
+      "url": "https://github.com/JuanpiMontoya/prueba-commit-tracker/commit/e3062645852a81d71f0c1a20f86f7a06c4b7f3f6"
     },
     "stats": {
       "total": 6,
@@ -107,7 +107,7 @@
     "commit": {
       "date": "2025-03-27T04:17:33.000Z",
       "message": "Fizzbuzz - commit history corregido",
-      "url": ""
+      "url": "https://github.com/JuanpiMontoya/prueba-commit-tracker/commit/ab1936af95112ad2ba7c1c4be513f548e1de4120"
     },
     "stats": {
       "total": 98,
@@ -124,12 +124,46 @@
     "commit": {
       "date": "2025-03-27T04:31:29.000Z",
       "message": "Fizzbuzz - commit history corregido 2",
-      "url": ""
+      "url": "https://github.com/JuanpiMontoya/prueba-commit-tracker/commit/b00fd0cbdd8006907cb5ebf1ee9227e3f14ee12b"
     },
     "stats": {
       "total": 23,
       "additions": 15,
       "deletions": 8,
+      "date": "2025-03-27"
+    },
+    "coverage": 100,
+    "test_count": 4
+  },
+  {
+    "sha": "03abc803b699c9e6b3365b2eda52de3242b623a6",
+    "author": "Juanpi",
+    "commit": {
+      "date": "2025-03-27T04:32:07.000Z",
+      "message": "Actualizar historial de commits antes del push",
+      "url": "https://github.com/JuanpiMontoya/prueba-commit-tracker/commit/03abc803b699c9e6b3365b2eda52de3242b623a6"
+    },
+    "stats": {
+      "total": 34,
+      "additions": 34,
+      "deletions": 0,
+      "date": "2025-03-27"
+    },
+    "coverage": 100,
+    "test_count": 4
+  },
+  {
+    "sha": "b9a54708bc166cdcbafd913a566e3b1fc6e58cdd",
+    "author": "Juanpi",
+    "commit": {
+      "date": "2025-03-27T05:09:11.000Z",
+      "message": "Fizzbuzz - commit history corregido url",
+      "url": "https://github.com/JuanpiMontoya/prueba-commit-tracker/commit/b9a54708bc166cdcbafd913a566e3b1fc6e58cdd"
+    },
+    "stats": {
+      "total": 8,
+      "additions": 7,
+      "deletions": 1,
       "date": "2025-03-27"
     },
     "coverage": 100,
