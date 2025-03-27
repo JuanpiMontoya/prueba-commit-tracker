@@ -7,6 +7,9 @@ function getAllCommits() {
   console.log('Recuperando historial de commits...');
   let commits = [];
   const logCommand = 'git log --pretty=format:"%H|%an|%ad|%s" --date=iso --reverse';
+  const repoUrl = execSync('git config --get remote.origin.url', { stdio: 'pipe' }).toString().trim();
+  const repoBaseUrl = repoUrl.replace(/\.git$/, '').replace('git@github.com:', 'https://github.com/');
+
   try {
     const logOutput = execSync(logCommand, { stdio: 'pipe' }).toString();
 
@@ -47,13 +50,16 @@ function getAllCommits() {
         console.error(`Error calculando coverage para ${sha}:`, error.message);
       }
 
+      // Construir la URL del commit
+      const commitUrl = `${repoBaseUrl}/commit/${sha}`;
+
       commits.push({
         sha,
         author,
         commit: {
           date: commitDate.toISOString(),
           message,
-          url: '',
+          url: commitUrl,
         },
         stats: {
           total: additions + deletions,
