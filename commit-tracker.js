@@ -4,10 +4,11 @@ const { execSync } = require('child_process');
 const DATA_FILE = 'commit-history.json';
 
 function getAllCommits() {
+  console.log('Recuperando historial de commits...');
   let commits = [];
   const logCommand = 'git log --pretty=format:"%H|%an|%ad|%s" --date=iso --reverse';
   try {
-    const logOutput = execSync(logCommand).toString();
+    const logOutput = execSync(logCommand, { stdio: 'pipe' }).toString();
 
     logOutput.split('\n').forEach((line) => {
       const [sha, author, date, message] = line.split('|');
@@ -16,7 +17,7 @@ function getAllCommits() {
       // Obtener adiciones y eliminaciones por commit
       let additions = 0, deletions = 0;
       try {
-        const diffStats = execSync(`git show --stat ${sha}`).toString();
+        const diffStats = execSync(`git show --stat ${sha}`, { stdio: 'pipe' }).toString();
         const additionsMatch = diffStats.match(/(\d+) insertion/);
         const deletionsMatch = diffStats.match(/(\d+) deletion/);
         additions = additionsMatch ? parseInt(additionsMatch[1]) : 0;
@@ -26,16 +27,22 @@ function getAllCommits() {
       // Calcular test count y coverage
       let testCount = 0, coverage = 0;
       try {
-        execSync(`git stash`); // Guardar cambios locales
-        execSync(`git checkout ${sha}`);
-        const jestOutput = execSync('npx jest --coverage --json').toString();
+        execSync(`git reset --hard`, { stdio: 'pipe' }); // Limpiar el índice y el directorio de trabajo
+        execSync(`git checkout ${sha}`, { stdio: 'pipe' });
+
+        // Obtener cobertura del comando separado
+        const coverageOutput = execSync('npm test -- --coverage --verbose', { stdio: 'pipe' }).toString();
+        const coverageMatch = coverageOutput.match(/All files\s*\|[^|]*\|[^|]*\|[^|]*\|\s*(\d+(\.\d+)?)\s*\|/);
+        if (coverageMatch) {
+          coverage = parseFloat(coverageMatch[1]);
+        }
+
+        const jestOutput = execSync('npx jest --coverage --json', { stdio: 'pipe' }).toString();
         const jestResults = JSON.parse(jestOutput);
 
         testCount = jestResults.numTotalTests;
-        coverage = jestResults.coverageMap.__coverage_schema; // Ajusta según la estructura real de tu salida de Jest
 
-        execSync(`git checkout -`); // Volver al estado anterior
-        execSync(`git stash pop`); // Recuperar cambios guardados
+        execSync(`git checkout -`, { stdio: 'pipe' }); // Volver al estado anterior
       } catch (error) {
         console.error(`Error calculando coverage para ${sha}:`, error.message);
       }
